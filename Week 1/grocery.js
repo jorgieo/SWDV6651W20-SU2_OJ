@@ -3,9 +3,6 @@ var Grocery = /** @class */ (function () {
         this.name = name;
         this.quantity = quantity;
         this.brand = brand;
-        this.name = name;
-        this.quantity = quantity;
-        this.brand = brand;
     }
     return Grocery;
 }());

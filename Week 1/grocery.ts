@@ -1,8 +1,5 @@
 class Grocery {
     constructor(public name:String, public quantity:Number, public brand:String){
-        this.name = name;
-        this.quantity = quantity;
-        this.brand = brand;
     }
 }
 
