@@ -14,50 +14,25 @@
   </ion-header> -->
 
   <ion-list-header>
-    <ion-input placeholder="Enter Input"></ion-input>
-    <ion-button fill="outline">Add</ion-button>
+    <ion-input placeholder="Enter an Item"></ion-input>
+    <ion-button shape="round" fill="solid" color="success" (click)="addItem()">Add</ion-button>
   </ion-list-header>
 
   <ion-list>
 
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of items">
       <ion-item>
-        <ion-label>Bananas</ion-label>
-        <p>Qty: 6</p>
+        <ion-label>{{item.name}}</ion-label> <br>
+        <p>Qty: {{item.qty}}</p>
       </ion-item>
       <ion-item-options side="end">
-        <button ion-button color="primary" icon-start>
+        <ion-button shape="round" color="danger" (click)="deleteItem()">
           <ion-icon name="trash-outline"></ion-icon>
           Remove
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-  
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Apples</ion-label>
-        <p>Qty: 3</p>
-      </ion-item>
-      <ion-item-options side="end">
-        <button ion-button color="primary" icon-start>
-          <ion-icon name="trash-outline"></ion-icon>
-          Remove
-        </button>
+        </ion-button>
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Milk</ion-label>
-        <p>Qty: 1</p>
-      </ion-item>
-      <ion-item-options side="end">
-        <button ion-button color="primary" icon-start>
-          <ion-icon name="trash-outline"></ion-icon>
-          Remove
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
 
   </ion-list>
 
