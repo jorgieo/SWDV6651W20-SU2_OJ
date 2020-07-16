@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -29,13 +30,18 @@ export class Tab1Page {
     }
   ];
 
-  deleteItem(){
+  constructor(public toastController: ToastController) {}
 
+  async deleteItem(item){
+
+      const toast = await this.toastController.create({
+        message: 'Removed Item - '+item.name,
+        duration: 2000
+      });
+      toast.present();
   };
-  
+
   addItem(){
 
   };
-  constructor() {}
-
 }
